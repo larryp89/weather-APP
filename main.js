@@ -148,31 +148,31 @@ function displayIcon(condition) {
   icon.className = "icon";
   switch (condition) {
     case "snow":
-      icon.src = "./snow.png";
+      icon.src = "./weather_icons/snow.png";
       break;
     case "rain":
-      icon.src = "./rain.png";
+      icon.src = "/weather_icons/rain.png";
       break;
     case "fog":
-      icon.src = "./fog.png";
+      icon.src = "./weather_icons/fog.png";
       break;
     case "wind":
-      icon.src = "./wind.png";
+      icon.src = "./weather_icons/wind.png";
       break;
     case "cloudy":
-      icon.src = "./cloudy.png";
+      icon.src = "/weather_icons/cloudy.png";
       break;
     case "partly-cloudy-day":
-      icon.src = "./partly-cloudy-day.png";
+      icon.src = "./weather_icons/partly-cloudy-day.png";
       break;
     case "partly-cloudy-night":
-      icon.src = "./partly-cloudy-night.png";
+      icon.src = "./weather_icons/partly-cloudy-night.png";
       break;
     case "clear-day":
-      icon.src = "./clear-day.png";
+      icon.src = "./weather_icons/clear-day.png";
       break;
     case "clear-night":
-      icon.src = "./clear-night.png";
+      icon.src = "./weather_icons/clear-night.png";
       break;
   }
   return icon;
@@ -217,7 +217,9 @@ function buildWeeklyOverviewGrid(data) {
     const tempDiv = document.createElement("div");
     tempDiv.innerHTML = `<span class="temperature">${Math.round(
       day.tempmax
-    )}°C /</span> <span class="temperature">${Math.round(day.tempmin)}°C</span>`;
+    )}°C /</span> <span class="temperature">${Math.round(
+      day.tempmin
+    )}°C</span>`;
     weeklyRow.appendChild(tempDiv);
 
     container.appendChild(weeklyRow);
