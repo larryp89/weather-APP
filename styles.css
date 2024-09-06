@@ -1,0 +1,234 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: #333;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  padding: var(--padding-base);
+  border: none;
+  background-color: var(--primary-color);
+  color: black;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: var(--font-size-base);
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+button:hover {
+  background-color: #e15d3a;
+}
+
+button:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Root Variables */
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #343a40;
+  --font-size-base: 16px;
+  --font-size-large: 24px;
+  --padding-base: 1rem;
+  --padding-deep: 5rem;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 10rem;
+  background: var(--secondary-color);
+  height: 8rem;
+}
+
+.logo {
+  height: 4rem;
+}
+
+.header h3 {
+  color: var(--primary-color);
+  padding: var(--padding-base);
+  margin-right: 3rem;
+}
+
+.header input {
+  margin: auto;
+  margin-right: 1rem;
+  width: 40rem;
+  height: 2rem;
+  border-radius: 1rem;
+  border: none;
+  padding-left: 1rem;
+}
+
+button.toggle {
+  margin-left: auto;
+}
+
+.icon {
+  height: 5rem;
+  width: 5rem;
+}
+/* Main styles */
+.main {
+  padding: var(--padding-deep);
+  background-color: var(--primary-color);
+}
+#location {
+  font-size: 3rem;
+}
+
+#current-temp {
+  font-size: 4rem;
+}
+
+.description {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.daily {
+  padding-top: 1rem;
+  border-top: 1px solid #dee2e6;
+  display: grid;
+  grid-template-columns: repeat(24, minmax(100px, 1fr));
+  overflow-x: auto;
+  margin-left: 10rem;
+  width: 100%;
+}
+
+.daily-row {
+  display: contents;
+}
+
+.daily-div {
+  text-align: center;
+}
+
+div.weekly-header-row > div:nth-child(1) {
+  text-align: left;
+}
+
+.weekly-overview {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+.weekly-header-row,
+.weekly-row {
+  display: table-row;
+}
+
+.weekly-header-row > div,
+.weekly-row > div {
+  display: table-cell;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.weekly-header-row > div {
+  font-weight: normal;
+  color: #6c757d;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.weekly-row > div:first-child {
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+}
+
+.weekly-overview img {
+  height: 2.5rem;
+  width: auto;
+}
+
+.weekly-row > div:last-child {
+  font-weight: bold;
+}
+/* Section - summary */
+.summary {
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background-color: var(--secondary-color);
+  padding: var(--padding-deep);
+  row-gap: 1rem;
+  color: white;
+}
+
+.outer > div:first-child {
+  text-transform: uppercase;
+  color: #5a6f75;
+  font-size: 0.8rem;
+}
+
+/* Bottom section */
+.bottom-section {
+  padding: var(--padding-deep);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .button.toggle {
+    margin-right: 1rem;
+  }
+}

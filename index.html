@@ -1,14 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<h1>Weather Check</h1>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header section -->
+    <header class="header">
+      <img class="logo" src="./station.png" />
+      <h3>The Weather Station</h3>
+      <form action="" class="flex-row">
+        <input required type="text" placeholder="Location" />
+        <button class="search" type="submit">Search</button>
+      </form>
+
+      <button class="toggle" type="button">°C/F</button>
+    </header>
+
+    <!-- Main body -->
+    <main class="main">
+      <div class="flex-row">
+        <div class="flex-col main-summary">
+          <div id="location"></div>
+          <div id="short-desc"></div>
+          <div id="current-temp"></div>
+          <div id="current-feel"></div>
+        </div>
+        <div class="daily"></div>
+      </div>
+      <div class="description"></div>
+    </main>
+
+    <section class="summary">
+      <div class="outer">
+        <div>Sunrise</div>
+        <div id="sunrise"></div>
+      </div>
+      <div class="outer">
+        <div>Sunset</div>
+        <div id="sunset"></div>
+      </div>
+      <div class="outer">
+        <div>Chance of rain</div>
+        <div id="chance-rain"></div>
+      </div>
+      <div class="outer">
+        <div>Humidity</div>
+        <div id="humidity"></div>
+      </div>
+      <div class="outer">
+        <div>Wind</div>
+        <div id="wind"></div>
+      </div>
+      <div class="outer">
+        <div>Feels like (H/L)</div>
+        <div id="feels-like"></div>
+      </div>
+      <div class="outer">
+        <div>Precipitation</div>
+        <div id="precip"></div>
+      </div>
+      <div class="outer">
+        <div>Pressure</div>
+        <div id="pressure"></div>
+      </div>
+      <div class="outer">
+        <div>Visibility</div>
+        <div id="vis"></div>
+      </div>
+      <div class="outer">
+        <div>UV Index</div>
+        <div id="uv"></div>
+      </div>
+    </section>
+
+    <section class="bottom-section">
+      <div class="weekly-overview"></div>
+    </section>
 
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
