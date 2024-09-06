@@ -1,4 +1,4 @@
-// Get today
+// Get today's date
 const now = new Date();
 
 // Select DOM elements
