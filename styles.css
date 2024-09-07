@@ -128,6 +128,9 @@ button.toggle {
   font-size: 4rem;
 }
 
+#current-feel {
+  text-align: center;
+}
 .description {
   margin-top: 3rem;
   text-align: center;
@@ -228,7 +231,61 @@ div.weekly-header-row > div:nth-child(1) {
     height: auto;
   }
 
+  .header input {
+    width: 100%; /* Full width on mobile */
+    margin-right: 0;
+  }
+
   .button.toggle {
     margin-right: 1rem;
+  }
+
+  #location {
+    font-size: 2rem; /* Reduce size for mobile */
+  }
+
+  #current-temp {
+    font-size: 2.5rem; /* Reduce size for mobile */
+  }
+
+  .daily {
+    margin-left: 0; /* Remove left margin for mobile */
+    padding: 1rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
+  }
+
+  /* Adjust weekly overview for mobile */
+  .weekly-overview {
+    font-size: 0.8rem; /* Reduce font size */
+  }
+
+  /* Adjust summary section */
+  .summary {
+    grid-template-columns: repeat(2, 1fr); /* Stack columns */
+    grid-template-rows: repeat(5, 1fr);
+    padding: 2rem; /* Reduce padding */
+  }
+
+  .bottom-section {
+    padding: 2rem; /* Reduce padding for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  .header {
+    padding: 0.5rem;
+  }
+
+  .header input {
+    font-size: 1rem;
+  }
+
+  .icon {
+    width: 3rem;
+    height: 3rem;
   }
 }
