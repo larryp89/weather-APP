@@ -149,30 +149,39 @@ function displayIcon(condition) {
   switch (condition) {
     case "snow":
       icon.src = "./weather_icons/snow.png";
+      icon.alt = "snow"
       break;
     case "rain":
       icon.src = "/weather_icons/rain.png";
+      icon.alt = "rain"
       break;
     case "fog":
       icon.src = "./weather_icons/fog.png";
+      icon.alt = "fog"
       break;
     case "wind":
       icon.src = "./weather_icons/wind.png";
+      icon.alt = "wind"
       break;
     case "cloudy":
       icon.src = "/weather_icons/cloudy.png";
+      icon.alt = "cloudy"
       break;
     case "partly-cloudy-day":
       icon.src = "./weather_icons/partly-cloudy-day.png";
+      icon.alt = "partly cloudy"
       break;
     case "partly-cloudy-night":
       icon.src = "./weather_icons/partly-cloudy-night.png";
+      icon.alt = "partly cloudy£"
       break;
     case "clear-day":
       icon.src = "./weather_icons/clear-day.png";
+      icon.alt = "clear day"
       break;
     case "clear-night":
       icon.src = "./weather_icons/clear-night.png";
+      icon.alt = "clear night"
       break;
   }
   return icon;
