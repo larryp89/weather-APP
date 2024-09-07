@@ -288,6 +288,10 @@ div.weekly-header-row > div:nth-child(1) {
     font-size: 1.2rem;
   }
 
+  .daily{
+    margin-left: 2rem
+  }
+
   .weekly-overview {
     font-size: 0.9rem;
   }
@@ -325,6 +329,9 @@ div.weekly-header-row > div:nth-child(1) {
     height: 3rem;
   }
 
+  .daily{
+    margin-left: 0;
+  }
   .weekly-overview {
     font-size: 0.8rem;
   }
