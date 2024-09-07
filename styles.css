@@ -124,6 +124,10 @@ button.toggle {
   font-size: 3rem;
 }
 
+#short-desc{
+    text-align: center;
+}
+
 #current-temp {
   font-size: 4rem;
 }
