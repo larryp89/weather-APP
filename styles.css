@@ -108,7 +108,7 @@ video {
 }
 
 button.toggle {
-  margin-left: auto;
+  margin-left: 5rem;
 }
 
 .icon {
@@ -223,8 +223,42 @@ div.weekly-header-row > div:nth-child(1) {
   padding: var(--padding-deep);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .header {
+    padding: 0 5rem;
+  }
+
+  .header input {
+    width: 30rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  :root {
+    --font-size-base: 14px;
+    --padding-deep: 3rem;
+  }
+
+  .header {
+    padding: 0 2rem;
+    height: 6rem;
+  }
+
+  .header input {
+    width: 20rem;
+  }
+
+  .summary {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
   .header {
     flex-direction: column;
     padding: 1rem;
@@ -232,54 +266,56 @@ div.weekly-header-row > div:nth-child(1) {
   }
 
   .header input {
-    width: 100%; /* Full width on mobile */
+    width: 100%;
     margin-right: 0;
+    margin-bottom: 1rem;
   }
 
   .button.toggle {
-    margin-right: 1rem;
+    margin-left: 0;
+    align-self: flex-end;
   }
 
   #location {
-    font-size: 2rem; /* Reduce size for mobile */
+    font-size: 2rem;
   }
 
   #current-temp {
-    font-size: 2.5rem; /* Reduce size for mobile */
-  }
-
-  .daily {
-    margin-left: 0; /* Remove left margin for mobile */
-    padding: 1rem;
+    font-size: 2.5rem;
   }
 
   .description {
     font-size: 1.2rem;
   }
 
-  /* Adjust weekly overview for mobile */
   .weekly-overview {
-    font-size: 0.8rem; /* Reduce font size */
+    font-size: 0.9rem;
   }
 
-  /* Adjust summary section */
   .summary {
-    grid-template-columns: repeat(2, 1fr); /* Stack columns */
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    padding: 2rem; /* Reduce padding */
+    padding: 2rem;
   }
 
   .bottom-section {
-    padding: 2rem; /* Reduce padding for mobile */
+    padding: 2rem;
   }
 }
 
-@media (max-width: 480px) {
-  /* Further adjustments for very small screens */
+@media screen and (max-width: 480px) {
+  :root {
+    --font-size-base: 12px;
+    --padding-deep: 2rem;
+  }
+
   .header {
     padding: 0.5rem;
   }
 
+  .toggle{
+    margin-left: 0;
+  }
   .header input {
     font-size: 1rem;
   }
@@ -287,5 +323,15 @@ div.weekly-header-row > div:nth-child(1) {
   .icon {
     width: 3rem;
     height: 3rem;
+  }
+
+  .weekly-overview {
+    font-size: 0.8rem;
+  }
+
+  .summary {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, auto);
+    gap: 1rem;
   }
 }
